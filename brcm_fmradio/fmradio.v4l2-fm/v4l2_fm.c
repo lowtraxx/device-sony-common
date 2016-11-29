@@ -186,7 +186,7 @@ int v4l2_resume(void** session_data){
 int v4l2_mute(void** session_data, int mute){
   fm_v4l2_data* session;
 
-  ALOGI("%s:\n", __FUNCTION__);
+  ALOGI("%s:%d\n", __FUNCTION__, mute);
   session = get_session_data(session_data);
 
   return set_mute(session->fd, mute);
@@ -197,7 +197,7 @@ int v4l2_set_frequency(void** session_data, int frequency){
   fm_v4l2_data* session;
   int ret;
 
-  ALOGI("%s:\n", __FUNCTION__);
+  ALOGI("%s:%d\n", __FUNCTION__, frequency);
   session = get_session_data(session_data);
 
   session->freq = get_proprietary_freq( frequency, session->fact);
