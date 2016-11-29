@@ -22,7 +22,8 @@ BOARD_HARDWARE_CLASS += device/sony/common/cmhw
 
 # CM Packages
 PRODUCT_PACKAGES += \
-    Gello
+    Gello \
+    Snap
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
