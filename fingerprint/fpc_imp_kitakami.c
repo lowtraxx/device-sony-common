@@ -411,7 +411,6 @@ int fpc_enroll_step(uint32_t *remaining_touches)
     if(ret < 0) {
         return -1;
     }
-
     *remaining_touches = fpc_get_remaining_touches();
 
     return rec_cmd->ret_val;

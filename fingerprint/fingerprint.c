@@ -384,7 +384,7 @@ static int fingerprint_authenticate(struct fingerprint_device __unused *dev,
     auth_thread_running = true;
     pthread_mutex_unlock(&lock);
 
-    // FIXME: Verify whether this needs to run on each 
+    // FIXME: Verify whether this needs to run on each
     fpc_set_auth_challenge(0);
 
     if(pthread_create(&thread, NULL, auth_thread_loop, NULL)) {

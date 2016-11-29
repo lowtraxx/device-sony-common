@@ -332,6 +332,7 @@
       </list>
 
    </listitem>
+
    <!-- MSM8976 parameters -->
    <listitem name = "Eldarion">
 
@@ -466,6 +467,5 @@
       <data type="int"> 0 </data>
     </list>
   </listitem>
-
 </list>
 

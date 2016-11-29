@@ -304,6 +304,7 @@
        <data type="string"> rmnet_data7 </data>
      </list>
    </listitem>
+
    <!-- Configuration for MSM8976 -->
    <listitem name="Eldarion">
 
@@ -338,6 +339,7 @@
 	 </list>
 
    </listitem>
+
    <!-- Configuration for MSM8996  -->
    <listitem name="msm8996">
 
@@ -535,6 +537,5 @@
        <data type="string"> rmnet_data7 </data>
      </list>
    </listitem>
-
 </list>
 

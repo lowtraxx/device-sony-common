@@ -244,7 +244,6 @@ int32_t qcom_km_ion_dealloc(struct qcom_km_ion_info_t *handle)
     return ret;
 }
 
-
 char* qsee_error_strings(int err)
 {
     switch (err)
@@ -265,4 +264,3 @@ char* qsee_error_strings(int err)
             return "QSEECom: Unknown error\n";
     }
 }
-
