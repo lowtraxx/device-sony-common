@@ -268,7 +268,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.camera.HAL3.enabled=0 \
+    persist.camera.HAL3.enabled=1 \
     persist.camera.gyro.disable=1 \
     persist.camera.feature.cac=0 \
     persist.camera.ois.disable=0 \
@@ -280,3 +280,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.qualcomm.sns.daemon=0 \
     debug.qualcomm.sns.hal=0 \
     debug.qualcomm.sns.libsensor1=0
+
+# sdcardFS
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sys.sdcardfs=true
