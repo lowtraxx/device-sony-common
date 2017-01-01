@@ -1,1 +1,4 @@
+# HAL1 cam hack
 allow mm-qcamerad mediaserver:fd use;
+allow mm-qcamerad graphics_device:dir search;
+allow mm-qcamerad camera_data_file:file create;

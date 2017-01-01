@@ -17,8 +17,9 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 DEVICE_SPECIFIC_CAMERA_PATH := hardware/sony/camera
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 
-# CM Hardware
-BOARD_HARDWARE_CLASS += device/sony/common/cmhw
+# DataServices
+DEVICE_SPECIFIC_DATASERVICES := hardware/sony/dataservices
+USE_DEVICE_SPECIFIC_DATASERVICES := true
 
 # CM Packages
 PRODUCT_PACKAGES += \

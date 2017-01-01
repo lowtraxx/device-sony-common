@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2007 The Android Open Source Project
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     Copyright (C) 2016 The CyanogenMod Project
+>>>>>>> sonylos/cm-14.1
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,8 +19,12 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Does the device allow updating the recovery. -->
+    <bool name="config_enableRecoveryUpdater">false</bool>
+
     <!-- If the Storage Manager settings are enabled. -->
     <bool name="config_storage_manager_settings_enabled">true</bool>
+
 </resources>

@@ -12,13 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Common path
+COMMON_PATH := device/sony/common
+
 TARGET_NO_RADIOIMAGE := true
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RECOVERY := false
 TARGET_NO_KERNEL := false
 
 # common cmdline parameters
-BOARD_KERNEL_CMDLINE += user_debug=31 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += user_debug=31
 BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x3F ehci-hcd.park=3
 BOARD_KERNEL_CMDLINE += dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y
 BOARD_KERNEL_CMDLINE += coherent_pool=8M
@@ -58,7 +61,10 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 EXTENDED_FONT_FOOTPRINT := true
 
 # Set seccomp policy for media server
-BOARD_SECCOMP_POLICY += device/sony/common/seccomp
+BOARD_SECCOMP_POLICY += $(COMMON_PATH)/seccomp
+
+# Init configuration for init_sony
+include $(COMMON_PATH)/init/config.mk
 
 # Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
@@ -78,3 +84,4 @@ BUILD_KERNEL := true
 
 # SELinux
 include device/sony/sepolicy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += device/sony/common/sepolicy

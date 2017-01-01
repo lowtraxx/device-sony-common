@@ -1,1 +1,3 @@
+# HAL1 cam hack
 allow mediaserver mm-qcamerad:unix_dgram_socket sendto;
+allow mediaserver camera_data_file:dir search;
