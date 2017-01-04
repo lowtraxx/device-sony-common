@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Common path
-COMMON_PATH := device/sony/common-aosp
+COMMON_PATH := device/sony/common
 
 TARGET_NO_RADIOIMAGE := true
 TARGET_NO_BOOTLOADER := true

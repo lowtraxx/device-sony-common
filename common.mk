@@ -14,8 +14,8 @@
 
 include device/sony/common/cm-common.mk
 # Common path
-COMMON_PATH := device/sony/common-aosp
-include device/sony/common-aosp/lineage-common.mk
+COMMON_PATH := device/sony/common
+include device/sony/common/lineage-common.mk
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 
 # Common Specific Permissions
