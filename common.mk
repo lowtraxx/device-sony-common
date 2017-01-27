@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include device/sony/common/cm-common.mk
+include device/sony/common/lineage-common.mk
 # Common path
 COMMON_PATH := device/sony/common
 include device/sony/common/lineage-common.mk

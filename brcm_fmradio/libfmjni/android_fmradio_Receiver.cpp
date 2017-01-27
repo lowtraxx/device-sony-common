@@ -716,6 +716,14 @@ jshort readRds(JNIEnv *env, jobject thiz)
     return 0x0040; //Java: RDS_EVENT_LAST_RADIOTEXT
 }
 
+
+jshort activeAf(JNIEnv *env, jobject thiz)
+{
+    jshort ret_freq = 0;
+    ALOGD("%s, [Not Implemented]\n", __func__);
+    return ret_freq;
+}
+
 jint setRds(JNIEnv *env, jobject thiz, jboolean rdson)
 {
     int ret = 0;
@@ -884,23 +892,25 @@ static jboolean closeDev(JNIEnv * env, jobject obj,
     return JNI_TRUE;
 }
 
+static const char *classPathNameRx = "com/android/fmradio/FmNative";
 
 static JNINativeMethod gMethods[] = {
-    {"openDev", "()Z", (void*)openDev },
-    {"closeDev", "()Z", (void*)closeDev },
-    {"powerUp", "(F)Z", (void*)powerUp },
-    {"powerDown", "(I)Z", (void*)powerDown },
-    {"tune", "(F)Z", (void*)tune },
-    {"seek", "(FZ)F", (void*)seek },
-    {"autoScan",  "()[S", (void*)autoScan },
-    {"stopScan",  "()Z", (void*)stopScan },
-    {"setRds",    "(Z)I", (void*)setRds  },
-    {"readRds",   "()S", (void*)readRds },
-    {"getPs",     "()[B", (void*)getPs  },
-    {"getLrText", "()[B", (void*)getLrText},
-    {"setMute",	"(Z)I", (void*)setMute},
-    {"isRdsSupport",	"()I", (void*)isRdsSupport},
-    {"switchAntenna", "(I)I", (void*)switchAntenna},
+    {"openDev", "()Z", (void*)openDev },  //1
+    {"closeDev", "()Z", (void*)closeDev }, //2
+    {"powerUp", "(F)Z", (void*)powerUp },  //3
+    {"powerDown", "(I)Z", (void*)powerDown }, //4
+    {"tune", "(F)Z", (void*)tune },          //5
+    {"seek", "(FZ)F", (void*)seek },         //6
+    {"autoScan",  "()[S", (void*)autoScan }, //7
+    {"stopScan",  "()Z", (void*)stopScan },  //8
+    {"setRds",    "(Z)I", (void*)setRds  },  //10
+    {"readRds",   "()S", (void*)readRds },  //11 will pending here for get event status
+    {"getPs",     "()[B", (void*)getPs  },  //12
+    {"getLrText", "()[B", (void*)getLrText}, //13
+    {"activeAf",  "()S", (void*)activeAf},   //14
+    {"setMute",	"(Z)I", (void*)setMute},  //15
+    {"isRdsSupport",	"()I", (void*)isRdsSupport},  //16
+    {"switchAntenna", "(I)I", (void*)switchAntenna}, //17
 };
 
 int registerAndroidFmRadioReceiver(JavaVM * vm, JNIEnv * env)
