@@ -77,7 +77,7 @@ endef
 MSM_VIDC_TARGET_LIST := msm8226 msm8916 msm8952 msm8974 msm8994 msm8996
 
 #List of targets that use master side content protection
-MASTER_SIDE_CP_TARGET_LIST := msm8996
+MASTER_SIDE_CP_TARGET_LIST := msm8996 msm8998
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
